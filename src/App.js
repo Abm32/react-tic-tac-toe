@@ -3,7 +3,7 @@ import "./App.css"
 
 function Square({ value, onSquareClick }) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className={`square ${value}`} onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -22,7 +22,8 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     onPlay(nextSquares);
   }
-
+  
+  
   const winner = calculateWinner(squares);
   let status;
   if (winner) {

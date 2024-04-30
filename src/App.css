@@ -31,10 +31,18 @@
   padding: 0;
   text-align: center;
   width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the text vertically */
 }
 
 .square:focus {
   outline: none;
+}
+
+.square.X,
+.square.O {
+  color: black;
 }
 
 .game-info {
